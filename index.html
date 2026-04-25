@@ -14,29 +14,58 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #ffffff; /* Changed to white */
+            color: #333333; /* Darkened text for contrast */
         }
-        .container { text-align: center; width: 80%; max-width: 400px; }
+        .container { 
+            text-align: center; 
+            width: 80%; 
+            max-width: 400px; 
+        }
         progress {
             width: 100%;
-            height: 30px;
+            height: 50px; /* Made significantly taller */
             margin: 20px 0;
-            accent-color: #4CAF50;
+            accent-color: #00B4D8; /* Tropical turquoise */
         }
+        
+        /* Specific styling for Safari/Chrome to ensure the tall progress bar looks good */
+        progress::-webkit-progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+        }
+        progress::-webkit-progress-value {
+            background-color: #00B4D8;
+            border-radius: 10px;
+        }
+        progress::-moz-progress-bar {
+            background-color: #00B4D8;
+            border-radius: 10px;
+        }
+
         button {
-            padding: 15px 30px;
+            padding: 18px 30px;
             font-size: 18px;
             font-weight: bold;
-            background-color: #4CAF50;
+            background-color: #00B4D8; /* Tropical turquoise */
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.2s, transform 0.1s;
         }
-        button:active { background-color: #45a049; }
-        #timer-display { font-size: 24px; font-variant-numeric: tabular-nums; }
+        button:active { 
+            background-color: #0096C7; /* Slightly darker on click */
+            transform: translateY(2px); /* Click depression effect */
+        }
+        #timer-display { 
+            font-size: 32px; 
+            font-weight: 600;
+            font-variant-numeric: tabular-nums; 
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
