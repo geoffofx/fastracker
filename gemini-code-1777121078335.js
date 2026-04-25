@@ -1,15 +1,21 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getFirestore, doc, onSnapshot, setDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
-// TODO: Replace with your Firebase project configuration
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID"
+  apiKey: "AIzaSyDdixTIqji4Nc7_Eq9OpeawPn6C3C0idFk",
+  authDomain: "fastracker-e94ce.firebaseapp.com",
+  projectId: "fastracker-e94ce",
+  storageBucket: "fastracker-e94ce.firebasestorage.app",
+  messagingSenderId: "151349931641",
+  appId: "1:151349931641:web:a65af6f7ac65de9e3aaea8",
+  measurementId: "G-LC7K2LD3XT"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const analytics = getAnalytics(app);
 
 // The dynamic variables
 const SIXTEEN_HOURS_MS = 16 * 60 * 60 * 1000;
