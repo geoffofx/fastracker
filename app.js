@@ -15,7 +15,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 
 // The dynamic variables
 const SIXTEEN_HOURS_MS = 16 * 60 * 60 * 1000;
